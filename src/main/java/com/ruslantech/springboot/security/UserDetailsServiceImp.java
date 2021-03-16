@@ -21,7 +21,7 @@ public class UserDetailsServiceImp implements UserDetailsService {
         User user = userDao.getUserByFirstName(firstName);
 
         if (user == null) {
-            throw new UsernameNotFoundException("пользователь не найден");
+            throw new UsernameNotFoundException("user not found");
         }
         return user;
     }
